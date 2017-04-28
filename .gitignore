@@ -1,1 +1,5 @@
+# 依赖
 node_modules/
+
+# 日志
+*.log

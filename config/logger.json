@@ -1,0 +1,22 @@
+{
+  "appenders": [
+    {
+      "type": "logLevelFilter",
+      "level": "DEBUG",
+      "appender": {
+        "type": "console"
+      }
+    },
+    {
+      "type": "logLevelFilter",
+      "level": "DEBUG",
+      "appender": {
+        "type": "dateFile",
+        "filename": "log/hangman",
+        "alwaysIncludePattern": true,
+        "pattern": "-yyyy-MM-dd.log",
+        "category": "normal"
+      }
+    }
+  ]
+}
