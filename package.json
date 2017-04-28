@@ -1,0 +1,41 @@
+{
+  "name": "node-chat",
+  "version": "1.0.0",
+  "description": "Just for practise socket.io",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d build",
+    "start": "nodemon src/app.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankZheng1111/node-chat.git"
+  },
+  "author": "frank.zheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankZheng1111/node-chat/issues"
+  },
+  "homepage": "https://github.com/frankZheng1111/node-chat#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "jade": "^1.11.0",
+    "log4js": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-istanbul": "^0.12.2",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-register": "^6.24.0",
+    "nodemon": "^1.11.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ],
+    "plugins": []
+  }
+}
