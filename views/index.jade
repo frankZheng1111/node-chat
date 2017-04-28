@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+      title 聊天室
+      script(type="text/javascript", src="javascripts/jquery.min.js")
+      script(type="text/javascript", src="javascripts/jquery.cookie.js")
+      link(type="text/css", rel="stylesheet", href="stylesheets/common.css")
+      link(type="text/css", rel="stylesheet", href="stylesheets/chat.css")
+    body
+      #contain
+        #content
+          #content_show
+            #contents
+          #content_saying
+            #toolbar
+            #input_content(contenteditable="true")
+              #sayingto
+                你好,
+                span#from
+                ，你正在对
+                span#to
+                说
+              #say 发送
+        #users_online
+          #usersbar
+            #user_label 在线用户
+            #users_list
+              ul#list
+
