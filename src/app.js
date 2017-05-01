@@ -90,14 +90,15 @@ io.sockets.on('connection', (socket) => {
       //向特定用户发送该用户发话信息
       //clients 为存储所有连接对象的数组
       //
-      let clients = io.sockets.clients();
+      // let clients = io.sockets.clients();
+      let clients = io.sockets.sockets;
       //遍历找到该用户
       //
-      clients.forEach((client) => {
+      for(let key in clients ) {
         //触发该用户客户端的 say 事件
         //
-        if (client.name == data.to) { client.emit('say', data); }
-      });
+        if (clients[key].name == data.to) { clients[key].emit('say', data); }
+      }
     }
   });
 
