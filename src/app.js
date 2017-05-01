@@ -1,6 +1,5 @@
 'use strict';
 import express from 'express';
-// import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
 import cookieParser from 'cookie-parser';
