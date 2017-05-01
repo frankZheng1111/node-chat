@@ -94,5 +94,19 @@ $(document).ready(function() {
     //显示正在对谁说话
     showSayTo();
   });
+
+  //服务器关闭
+  socket.on('disconnect', function() {
+    var sys = '<div style="color:#f00">系统:连接服务器失败！</div>';
+    $("#contents").append(sys + "<br/>");
+    $("#list").empty();
+  });
+
+  //重新启动服务器
+  socket.on('reconnect', function() {
+    var sys = '<div style="color:#f00">系统:重新连接服务器！</div>';
+    $("#contents").append(sys + "<br/>");
+    socket.emit('online', {user: from});
+  });
 });
 
