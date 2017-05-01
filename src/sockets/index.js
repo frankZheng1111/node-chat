@@ -1,7 +1,7 @@
 'use strict';
 
-  //有人上线
 export default function (socket, io) {
+  //有人上线
   //
   socket.on('online', (data) => {
     //将上线的用户名存储为 socket 对象的属性，以区分每个 socket 对象，方便后面使用
