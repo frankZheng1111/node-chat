@@ -81,5 +81,18 @@ $(document).ready(function() {
     $("#input_content").html("").focus();
   });
 
+  socket.on('offline', function (data) {
+      //显示系统消息
+    var sys = '<div style="color:#f00">系统(' + now() + '):' + '用户 ' + data.user + ' 下线了！</div>';
+    $("#contents").append(sys + "<br/>");
+    //刷新用户在线列表
+    flushUsers(data.users);
+    //如果正对某人聊天，该人却下线了
+    if (data.user == to) {
+      to = "all";
+    }
+    //显示正在对谁说话
+    showSayTo();
+  });
 });
 
